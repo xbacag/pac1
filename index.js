@@ -1,3 +1,2 @@
-const name = 'world';
-console.log(`Hello ${name}`);
-
+var collapsible = new Collapsible('.navbar-nav', 200);
+collapsible.render();

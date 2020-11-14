@@ -1,12 +1,128 @@
+<!doctype html>
 <html>
 
 <head>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Volkhov&display=swap" rel="stylesheet">
+    <title>Ken Follett</title>
 </head>
 
 <body>
-  <script src="./index.js"></script>
-  <h1>Hello World</h1>
+    <div class="contenedor">
+        <nav class="nav">
+            <img src="images/KenFollett_200.png" alt="logo Ken Follet" style="width:200px;height:86px;">
+        </nav>
+
+        <section class="destacado">
+            <picture>
+                <source media="(max-width: 430px)" srcset="images/destacado@mobile_430.jpg">
+                <source media="(min-width: 431px) and (max-width: 830px)" srcset="images/destacado@tablet_830.jpg">
+                <img src="images/destacado@desktop_1200.jpg" alt="libro destacado">
+            </picture>
+            <div class="centered">Lo nuevo para los<br>más impacientes</div>
+            <a href="#">
+                <button class="btn">LEER MÁS</button>
+            </a>
+        </section>
+
+        <section class="ultimos">
+            <h2>Últimos libros</h2>
+        </section>
+        <section class="ultimos1">
+            <a href="#">
+                <img srcset="images/las_tinieblas_y_el_alba@desktop_285.jpg 285w,
+                        images/las_tinieblas_y_el_alba@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                            285px" src="images/las_tinieblas_y_el_alba@desktop_285.jpg"
+                    alt="Portada las tinieblas y el alba">
+            </a>
+        </section>
+        <section class="ultimos2">
+            <a href="#">
+                <img srcset="images/una_columna_de_fuego@desktop_285.jpg 285w,
+                images/una_columna_de_fuego@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                285px" src="images/una_columna_de_fuego@desktop_285.jpg" alt="Portada una columna de fuego">
+            </a>
+        </section>
+        <section class="ultimos3">
+            <a href="#">
+                <img srcset="images/el_umbral_de_la_eternidad@desktop_285.jpg 285w,
+                images/el_umbral_de_la_eternidad@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                285px" src="images/el_umbral_de_la_eternidad@desktop_285.jpg" alt="Portada el umbral de la eternidad">
+            </a>
+        </section>
+        <section class="ultimos4">
+            <a href="#">
+                <img srcset="images/el_invierno_del_mundo@desktop_285.jpg 285w,
+                images/el_invierno_del_mundo@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                285px" src="images/el_invierno_del_mundo@desktop_285.jpg" alt="Portada el invierno del mundo">
+            </a>
+        </section>
+
+        <section class="categorias">
+            <h2>Categorias</h2>
+        </section>
+        <section class="categorias1">
+            <a href="#">
+                <img srcset="images/pilares@desktop_285.jpg 285w,
+                        images/pilares@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                            285px" src="images/pilares@desktop_285.jpg" alt="Categoria saga pilares de la tierra">
+            </a>
+        </section>
+        <section class="categorias2">
+            <a href="#">
+                <img srcset="images/nombre@desktop_285.jpg 285w,
+                        images/nombre@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                            285px" src="images/nombre@desktop_285.jpg" alt="Categoria novelas con su nombre">
+            </a>
+        </section>
+        <section class="categorias3">
+            <a href="#">
+                <img srcset="images/century@desktop_285.jpg 285w,
+                        images/century@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                            285px" src="images/century@desktop_285.jpg" alt="Categoria trilogia the century">
+            </a>
+        </section>
+        <section class="categorias4">
+            <a href="#">
+                <img srcset="images/seudonimo@desktop_285.jpg 285w,
+                        images/seudonimo@tablet_430.jpg 430w" sizes="(max-width: 830px) 430px,
+                            285px" src="images/seudonimo@desktop_285.jpg" alt="Categoria novelas con seudonimo">
+            </a>
+        </section>
+
+        <section class="delmes">
+            <h2>Libro del mes</h2>
+        </section>
+        <section class="delmes1">
+            <a href="#">
+                <img srcset="images/los_pilares_de_la_tierra@desktop_590.jpg 590w,
+                images/los_pilares_de_la_tierra@tablet_430.jpg 430w" sizes="(max-width: 830px) 590px,
+                430px" src="images/los_pilares_de_la_tierra@desktop_590.jpg" alt="Portada el invierno del mundo">
+            </a>
+        </section>
+        <section class="delmes2">
+            <h2 class="autor">Ken Follett</h2>
+            <h2 class="titulo">Los pilares de la tierra</h2>
+            <p class="text">La novela empieza con la historia de Tom Builder y su familia, Tom es un albañil que se
+                vuelve pobre al
+                perder su trabajo de constructor en una casa para el hijo de un noble, William Hamleigh. Agnes, su
+                esposa, da a luz en un bosque y muere. Tom decide abandonar al bebé; sin embargo, después se arrepiente
+                y va en su busca, pero no lo encuentra. Ellen, una mujer que vive en el bosque y con la que la familia
+                se encontró, le dice a Tom que un sacerdote ha encontrado al bebé y lo está cuidando. Ellen tiene un
+                hijo pelirrojo, Jack. Tom y Ellen van al monasterio del bosque a ver al bebé, al que los monjes han
+                bautizado como Jonathan, y deciden dejarlo con los monjes para que lo críen.</p>
+        </section>
+
+        <footer class="footer">
+            <p>Xavier Baca Garcia (PAC 1 M4.257 Eines HTML i CSS)</p>
+            <p>Máster universitario en Desarrollo de sitios y aplicaciones web</p>
+            <p>(CC BY-NC-ND 2020) UOC Universitat Oberta de Catalunya</p>
+        </footer>
+
+    </div>
+
 </body>
 
 </html>
