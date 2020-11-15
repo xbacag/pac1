@@ -310,7 +310,7 @@ header {
       right: -100%;
       top: 145px;
       width: 40%;
-      height: calc(100% - 70px);
+      height: 50%;
       flex-direction: column;
       justify-content: space-around;
       padding: 0;
