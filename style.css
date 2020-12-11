@@ -30,7 +30,7 @@ p{
                         "categorias1 categorias2 categorias3 categorias4"
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes2 delmes2"
-                        "footer footer footer footer";
+                        "footer1 footer2 footer2 footer3";
 }
 
 /* Make the image responsive */
@@ -41,6 +41,11 @@ p{
 
 .contenedor header {
   grid-area: header;
+}
+
+.contenedor .title {
+  float: left;
+  margin-left: -80px;
 }
 
 .contenedor .destacado{
@@ -75,6 +80,7 @@ p{
   border: none;
   cursor: pointer;
   border-radius: 20px;
+  
 }
 
 .contenedor .btn:hover {
@@ -147,13 +153,37 @@ p{
   text-align:justify;
 }
 
-.contenedor .footer{
-  grid-area: footer;
+.contenedor .footer1{
+  grid-area: footer1;
+  margin-right: -20px;
   padding: 3%;
   font-size: 14px;
   text-align: center;
   background-color: rgb(80, 80, 80);
   color: #fff;
+}
+
+.contenedor .footer2{
+  grid-area: footer2;
+  padding: 3%;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(80, 80, 80);
+  color: #fff;
+}
+
+.contenedor .footer3{
+  grid-area: footer3;
+  margin-left: -20px;
+  padding: 3%;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(80, 80, 80);
+  color: #fff;
+}
+
+.contenedor .footer1 .footer_evening {
+  clip-path: ellipse(50% 50% at 50% 50%);
 }
 
 .autor {
@@ -179,9 +209,20 @@ p{
                         "categorias3 categorias3 categorias4 categorias4"
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes2 delmes2"
-                        "footer footer footer footer";
+                        "footer1 footer1 footer1 footer1"
+                        "footer2 footer2 footer2 footer2"
+                        "footer3 footer3 footer3 footer3";
   }
-
+  .contenedor .footer1{
+    margin-right: 0px;
+  }
+    .contenedor .footer2{
+    margin-bottom: -20px;
+    margin-top: -20px;
+  }
+    .contenedor .footer3{
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 630px){
@@ -229,7 +270,9 @@ p{
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes1 delmes1"
                         "delmes2 delmes2 delmes2 delmes2"
-                        "footer footer footer footer";
+                        "footer1 footer1 footer1 footer1"
+                        "footer2 footer2 footer2 footer2"
+                        "footer3 footer3 footer3 footer3";
   }
   /* Centered text */
   .contenedor .centered {
@@ -323,4 +366,49 @@ header {
   .nav-active {
       right: 0;
   }
+}
+
+/* Transiciones */
+
+a img {
+  transition: 1.5s ease;
+}
+
+a img:hover {
+  transform: scale(1.1); 
+}
+
+.contenedor .btn {
+  border-color: #037872;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #037872 inset, 0 0 0 0 #037872;
+  transition: all 150ms ease-in-out;
+}
+.contenedor .btn:hover {
+  box-shadow: 0 0 10px 0 #037872 inset, 0 0 10px 4px #037872;
+}
+
+
+/* Animaciones*/
+
+.typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0); }
 }
