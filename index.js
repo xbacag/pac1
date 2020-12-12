@@ -1,5 +1,5 @@
 // Selection of HTML objects
-const burger = document.querySelector('.burger i');
+const burger = document.querySelector('.burger em');
 const nav = document.querySelector('.nav');
 
 // Defining a function
