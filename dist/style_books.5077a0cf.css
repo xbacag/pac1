@@ -21,15 +21,14 @@ p{
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(9, auto);
+  grid-template-rows: repeat(8, auto);
   grid-template-areas:  "header header header header"
                         "destacado destacado destacado destacado"
-                        "ultimos ultimos ultimos ultimos"
-                        "ultimos1 ultimos2 ultimos3 ultimos4"
-                        "categorias categorias categorias categorias"
-                        "categorias1 categorias2 categorias3 categorias4"
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes2 delmes2"
+                        "descripcion descripcion descripcion descripcion"
+                        "relacionados relacionados relacionados relacionados"
+                        "relacionados1 relacionados2 relacionados3 relacionados4"
                         "footer1 footer2 footer2 footer3";
 }
 
@@ -80,53 +79,10 @@ p{
   border: none;
   cursor: pointer;
   border-radius: 20px;
-  
 }
 
 .contenedor .btn:hover {
   background-color: black;
-}
-
-.contenedor .ultimos {
-  grid-area: ultimos;
-  padding: 3%;
-}
-
-.contenedor .ultimos1 {
-  grid-area: ultimos1;
-}
-
-.contenedor .ultimos2 {
-  grid-area: ultimos2;
-}
-
-.contenedor .ultimos3 {
-  grid-area: ultimos3;
-}
-
-.contenedor .ultimos4 {
-  grid-area: ultimos4;
-}
-
-.contenedor .categorias {
-  grid-area: categorias;
-  padding: 3%;
-}
-
-.contenedor .categorias1 {
-  grid-area: categorias1;
-}
-
-.contenedor .categorias2 {
-  grid-area: categorias2;
-}
-
-.contenedor .categorias3 {
-  grid-area: categorias3;
-}
-
-.contenedor .categorias4 {
-  grid-area: categorias4;
 }
 
 .contenedor .delmes {
@@ -151,6 +107,31 @@ p{
   grid-area: delmes2;
   margin:10%;
   text-align:justify;
+}
+
+.contenedor .descripcion {
+  grid-area: descripcion;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align:justify;
+}
+
+.contenedor .relacionados {
+  grid-area: relacionados;
+  padding: 3%;
+}
+
+.contenedor .relacionados1 {
+  grid-area: relacionados1;
+}
+.contenedor .relacionados2 {
+  grid-area: relacionados2;
+}
+.contenedor .relacionados3 {
+  grid-area: relacionados3;
+}
+.contenedor .relacionados4 {
+  grid-area: relacionados4;
 }
 
 .contenedor .footer1{
@@ -183,7 +164,8 @@ p{
 }
 
 .contenedor .footer1 .footer_evening {
-  clip-path: ellipse(50% 50% at 50% 50%);
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+          clip-path: ellipse(50% 50% at 50% 50%);
 }
 
 .autor {
@@ -201,14 +183,12 @@ p{
   .contenedor {
     grid-template-areas:"header header header header"
                         "destacado destacado destacado destacado"
-                        "ultimos ultimos ultimos ultimos"
-                        "ultimos1 ultimos1 ultimos2 ultimos2"
-                        "ultimos3 ultimos3 ultimos4 ultimos4"
-                        "categorias categorias categorias categorias"
-                        "categorias1 categorias1 categorias2 categorias2"
-                        "categorias3 categorias3 categorias4 categorias4"
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes2 delmes2"
+                        "descripcion descripcion descripcion descripcion"
+                        "relacionados relacionados relacionados relacionados"
+                        "relacionados1 relacionados1 relacionados2 relacionados2"
+                        "relacionados3 relacionados3 relacionados4 relacionados4"
                         "footer1 footer1 footer1 footer1"
                         "footer2 footer2 footer2 footer2"
                         "footer3 footer3 footer3 footer3";
@@ -257,19 +237,15 @@ p{
   .contenedor {
     grid-template-areas:"header header header header"
                         "destacado destacado destacado destacado"
-                        "ultimos ultimos ultimos ultimos"
-                        "ultimos1 ultimos1 ultimos1 ultimos1"
-                        "ultimos2 ultimos2 ultimos2 ultimos2"
-                        "ultimos3 ultimos3 ultimos3 ultimos3"
-                        "ultimos4 ultimos4 ultimos4 ultimos4"
-                        "categorias categorias categorias categorias"
-                        "categorias1 categorias1 categorias1 categorias1"
-                        "categorias2 categorias2 categorias2 categorias2"
-                        "categorias3 categorias3 categorias3 categorias3"
-                        "categorias4 categorias4 categorias4 categorias4"
                         "delmes delmes delmes delmes"
                         "delmes1 delmes1 delmes1 delmes1"
                         "delmes2 delmes2 delmes2 delmes2"
+                        "descripcion descripcion descripcion descripcion"
+                        "relacionados relacionados relacionados relacionados"
+                        "relacionados1 relacionados1 relacionados1 relacionados1"
+                        "relacionados2 relacionados2 relacionados2 relacionados2"
+                        "relacionados3 relacionados3 relacionados3 relacionados3"
+                        "relacionados4 relacionados4 relacionados4 relacionados4"
                         "footer1 footer1 footer1 footer1"
                         "footer2 footer2 footer2 footer2"
                         "footer3 footer3 footer3 footer3";
@@ -344,14 +320,13 @@ header {
 @media screen and (max-width: 830px) {
   .burger {
       display: block;
-      
   }
   .nav {
       z-index:1;
       margin-right: 5%;
       background: white;
       position: absolute;
-      right: 100%;
+      right: -100%;
       top: 145px;
       width: 40%;
       height: 50%;
@@ -389,6 +364,25 @@ a img:hover {
   box-shadow: 0 0 10px 0 #037872 inset, 0 0 10px 4px #037872;
 }
 
+/* Transiciones */
+
+a img {
+  transition: 1.5s ease;
+}
+
+a img:hover {
+  transform: scale(1.1); 
+}
+
+.contenedor .btn {
+  border-color: #037872;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #037872 inset, 0 0 0 0 #037872;
+  transition: all 150ms ease-in-out;
+}
+.contenedor .btn:hover {
+  box-shadow: 0 0 10px 0 #037872 inset, 0 0 10px 4px #037872;
+}
 
 /* Animaciones*/
 
@@ -397,19 +391,32 @@ a img:hover {
   border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
+  -webkit-animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+          animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
+@-webkit-keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
 /* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0); }
+}
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: rgb(0, 0, 0); }
 }
+
+/*# sourceMappingURL=/style_books.5077a0cf.css.map */
